@@ -1,9 +1,11 @@
 #!/bin/bash/ -x
 declare -A dict
+
 read -p "Enter the input a -->" a
 read -p "Enter the input b -->" b
 read -p "Enter the input c -->" c
 
+count=0
 result=$(( $a + $b * $c ))
 result2=$(( $a * $b + $c ))
 result3=$(( $c + $a / $b ))
@@ -18,3 +20,10 @@ echo "result1: $result"
 echo "result2: $result2"
 echo "result3: $result3"
 echo "result4: $result4"
+
+for((i=0; i<3; i++))
+do
+	array[$i]=${dict[@]}
+done
+echo ${dict[@]}
+
