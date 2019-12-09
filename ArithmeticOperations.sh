@@ -26,8 +26,14 @@ done
 
 echo ${dict[@]}
 
+#DESCENDING ORDER
 for acs in ${!array[@]}
 do
 	echo ${array[$acs]}
 done | sort -nr
 
+#ASCENDING ORDER
+for dec in ${!array[@]}
+do
+	echo ${array[dec]}
+done | sort -n
